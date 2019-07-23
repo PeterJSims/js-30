@@ -7,6 +7,17 @@
 </head>
 <body>
 <script>
+let pressedKeys = []
+const code = 'peter'
+
+  window.addEventListener('keyup', (e) => {
+    pressedKeys.push(e.key);
+    pressedKeys.splice(-code.length - 1, pressedKeys.length - code.length);
+    pressedKeys.join('').includes(code) ? cornify_add() : null
+
+  })
+
+  // konami keycode pattern: 38384040373937396665
 </script>
 </body>
 </html>
