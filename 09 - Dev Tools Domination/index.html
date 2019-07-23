@@ -22,24 +22,37 @@
     // Interpolated
 
     // Styled
+    console.log('%c Hello there', 'font-size: 30px')
 
     // warning!
-
+    console.warn('oh no!')
     // Error :|
-
+    console.error('oh nooo')
     // Info
-
+    console.info('hey there')
     // Testing
-
+    console.assert(3 + 5 === 3, 'wrong!')
     // clearing
 
     // Viewing DOM Elements
 
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.group(`${dog.name} `)
+      console.log(`This is ${dog.name}`)
+      console.log(`and is ${dog.age} years old`)
+    })
     // counting
+console.count('Me')
+console.count('Bob')
+console.count('Bob')
+console.count('Me')
+console.count('Me')
+console.count('Bob')
 
     // timing
+console.time('fetching data')
+console.timeEnd('fetching data')
 
   </script>
 </body>
