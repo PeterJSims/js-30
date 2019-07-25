@@ -45,22 +45,24 @@
   const divs = document.querySelectorAll('div');
   const button = document.querySelector('button');
 
-  function logText(e) {
+  function logText(e){
+
+    //stopPropagation stops bubbling!
+    // e.stopPropagation();
     console.log(this.classList.value);
-    // e.stopPropagation(); // stop bubbling!
-    // console.log(this);
   }
 
-  divs.forEach(div => div.addEventListener('click', logText, {
-    capture: false,
-    once: true
-  }));
+  divs.forEach(div => div.addEventListener('click', logText, { capture: false, once: true}))
 
-  button.addEventListener('click', () => {
-    console.log('Click!!!');
-  }, {
-    once: true
-  });
+
+button.addEventListener('click', () => {
+  console.log('Clicked')
+}, {
+  once: true
+})
+
+//The third argument above makes the event only available once. Great for shopping cards and such!
+
 
 </script>
 </body>
